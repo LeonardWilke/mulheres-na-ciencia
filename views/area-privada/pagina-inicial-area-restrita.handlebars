@@ -1,0 +1,43 @@
+<title>Área Privada {{cargo}} - Meninas e Mulheres na Ciência</title>
+<meta name="description" content='Área privada reservada para coordenadores do projeto "Meninas e Mulheres na Ciência"'>
+</head>
+
+<body>
+  {{>area-restrita/header-restrita}}
+  <main>
+    <section>
+      {{>area-restrita/mensagens-flash }}
+      <img class="logo-site" src="/icones/iconeSite.png">
+      <div class="alinharlista">
+        <ul>
+          <a href="/restrito/gerenciar/teses">
+            <li>
+              <h3 class="texto-Titulo">Gerenciar Teses</h3>
+            </li>
+          </a>
+          <a href="/restrito/gerenciar/analises">
+            <li>
+              <h3 class="texto-Titulo">Gerenciar Análises</h3>
+            </li>
+          </a>
+          <a href="/restrito/gerenciar/dicas-culturais/">
+            <li>
+              <h3 class="texto-Titulo">Gerenciar Dicas Culturais</h3>
+            </li>
+          </a>
+          {{#if eCoordenador}}
+          <a href="/restrito/gerenciar/integrantes">
+            <li>
+              <h3 class="texto-Titulo">Gerenciar Integrantes</h3>
+            </li>
+          </a>
+          {{/if}}
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+  </footer>
+</body>
+
+</html>

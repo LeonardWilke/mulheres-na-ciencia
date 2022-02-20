@@ -1,0 +1,117 @@
+<title>Gerenciamento de Integrantes - Meninas e Mulheres na Ciência</title>
+<meta name="description"
+  content='Área privada reservada para o gerenciamento de integrantes do projeto "Meninas e Mulheres na Ciência"'>
+</head>
+
+<body>
+  {{>area-restrita/header-restrita}}
+  <main>
+    <section>
+      {{>area-restrita/mensagens-flash }}
+      {{>area-restrita/voltar-e-logo caminho="/restrito/"}}
+      <h2 class="texto-Titulo texto-Titulo-2">Integrantes cadastradas</h2>
+      <p class="nota">Nota: A senha de toda nova integrante cadastrada é mulheresnaciencia123. Após o primeiro login, a
+        integrante
+        poderá mudar sua senha. </p>
+      {{>area-restrita/botao-criar nomeTabela=nomeTabela}}
+
+      <div class="registros">
+        {{#each dados}}
+        <table class="tabela-edicao-conteudo">
+          <colgroup>
+            <col span="1" style="width: 25%;">
+            <col span="1" style="width: 75%;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td>Nome</td>
+              <td>{{nome}}</td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td>{{cpfIntegrante}}</td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td>{{rgIntegrante}}</td>
+            </tr>
+            <tr>
+              <td>Cargo</td>
+              <td>{{cargoIntegrante}}</td>
+            </tr>
+            <tr>
+              <td>Telefone</td>
+              <td>{{telefone}}</td>
+            </tr>
+            <tr>
+              <td>E-mail</td>
+              <td>{{email}}</td>
+            </tr>
+            <tr>
+              <td>Senha (armazenada em Hash)</td>
+              <td>{{senhaLogin}}</td>
+            </tr>
+
+            <td colspan="2">
+              <div class="botoes-deletar-editar">
+                <a onclick='abrirMenuConfirmacaoExclusao({{id}}, "{{nome}}")'>
+                  <img src="/imagens/area-restrita/iconeDeletar.png">
+                </a>
+                <a href="/restrito/editar/integrantes/{{id}}">
+                  <img src="/imagens/area-restrita/iconeEditar.png">
+                </a>
+              </div>
+            </td>
+          </tbody>
+        </table>
+        {{else}}
+        <table class="tabela-edicao-conteudo">
+          <td>{{mensagemErro}}</td>
+        </table>
+        {{/each}}
+        <div class="overlay-excluir">
+          <img src="/icones/iconeSite.png">
+          <p class="deseja-excluir"></p>
+          <div class="botoes-excluir">
+            <form method="post" action="/restrito/deletar/{{nomeTabela}}/">
+              <button type="submit">Sim</button>
+            </form>
+            <button onclick="fecharMenuConfirmacaoExclusao()">Não</button>
+          </div>
+        </div>
+
+        <table class="tabela-edicao-conteudo">
+          <tr>
+            {{#if botaoPrimeiraPagina}}
+            <td><a href="/restrito/gerenciar/{{nomeTabela}}">1</a></td>
+            <td>...</td>
+            {{/if}}
+            {{#if paginaAnterior}}
+            <td><a href="/restrito/gerenciar/{{nomeTabela}}?pagina={{paginaAnterior}}">{{paginaAnterior}}</a></td>
+            {{else}}
+            <td><a href="" onclick="return false" class="link-desabilitado">1</a></td>
+            {{/if}}
+            <td class="pagina-atual">{{paginaAtual}}</td>
+            {{#if proximaPagina}}
+            <td><a href="/restrito/gerenciar/{{nomeTabela}}?pagina={{proximaPagina}}">{{proximaPagina}}</a></td>
+            {{#if botaoUltimaPagina}}
+            <td>...</td>
+            <td><a href="/restrito/gerenciar/{{nomeTabela}}?pagina={{ultimaPagina}}">{{ultimaPagina}}</a></td>
+            {{/if}}
+            {{else}}
+            <td><a href="" onclick="return false" class="link-desabilitado">{{paginaAtual}}</a></td>
+            {{/if}}
+
+
+
+          </tr>
+        </table>
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

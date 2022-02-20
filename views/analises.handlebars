@@ -1,0 +1,76 @@
+<title>Análises - Meninas e Mulheres na Ciência</title>
+<meta name="description" content='Nessa seção do site, você encontra análises sobre a temática do projeto.'>
+<link rel="stylesheet" type="text/css" href="/css/styles-paginas-pesquisas.css">
+<link rel="stylesheet" type="text/css" href="/css/styles-dicas-culturais.css">
+
+<style>
+  header,
+  footer {
+    background-color: #280e40;
+  }
+
+  section {
+    background-color: rgba(193, 159, 255, 64%);
+  }
+</style>
+
+</head>
+
+<body>
+  {{>main-header}}
+  <main>
+    <section>
+      <h2 class="titulo-pagina">Análises</h2>
+      <p class="descricao-pagina">Com relação ao processo de catalogação e análises, foi feita uma organização inicial,
+        em que a estudante bolsista Adanlyn passou a catalogar e analisar dados da planilha com informações de
+        matrículas e conclusões de curso, entre 2011 e 2019, de 4 cursos de Ensino médio técnico: Técnicos em
+        Administração, Contabilidade, Programação de Jogos Digitais e Informática. A estudante bolsista Ana Clara passou
+        a analisar mais 4 cursos de Ensino médio técnico: Técnicos em Mecânica, Petróleo e Gás, Eletrônica e Processos
+        Fotográficos. E a estudante voluntária Julia Vanzo cataloga os editais de entrada de estudantes, via processo
+        seletivo, analisando a presença de meninas pretas.
+      </p>
+      <br>
+      <br>
+      <ul class="lista-noticias">
+        {{#each analises}}
+        <li>
+          <div class="pseudo-noticia">
+            <h3><a href="/analise/{{id}}">{{tituloAnalise}}</a></h3>
+            <img src="{{caminhoImagemCapa}}">
+
+          </div>
+        </li>
+        {{else}}
+        <p>Em breve!</p>
+        {{/each}}
+      </ul>
+      <table class="tabela-pagina">
+        <tr>
+          {{#if botaoPrimeiraPagina}}
+          <td><a href="/analises">1</a></td>
+          <td>...</td>
+          {{/if}}
+          {{#if paginaAnterior}}
+          <td><a href="/analises?pagina={{paginaAnterior}}">{{paginaAnterior}}</a>
+          </td>
+          {{else}}
+          <td><a href="" onclick="return false" class="link-desabilitado">1</a></td>
+          {{/if}}
+          <td class="pagina-atual">{{paginaAtual}}</td>
+          {{#if proximaPagina}}
+          <td><a href="/analises?pagina={{proximaPagina}}">{{proximaPagina}}</a>
+          </td>
+          {{#if botaoUltimaPagina}}
+          <td>...</td>
+          <td><a href="/analises?pagina={{ultimaPagina}}">{{ultimaPagina}}</a>
+          </td>
+          {{/if}}
+          {{else}}
+          <td><a href="" onclick="return false" class="link-desabilitado">{{paginaAtual}}</a></td>
+          {{/if}}
+        </tr>
+      </table>
+    </section>
+  </main>
+  {{>main-footer}}
+</body>

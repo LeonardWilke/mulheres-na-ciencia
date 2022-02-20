@@ -1,0 +1,46 @@
+<title>Redefinir Senha - Meninas e Mulheres na Ciência</title>
+<style>
+  header,
+  footer {
+    background-color: #314a6b;
+  }
+
+  section {
+    padding: 4vh 0;
+    background-color: #cbcbba;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulo-pagina {
+    align-self: center;
+    min-width: 0;
+    max-width: 80vw;
+  }
+
+  .mensagem {
+    border: 0.1vh solid #000;
+    max-width: 50vw;
+    align-self: center;
+  }
+</style>
+</head>
+
+<body>
+  {{>main-header}}
+  <main>
+    <section>
+
+      <h2 class="titulo-pagina">Redefinir Senha</h2>
+      {{>area-restrita/mensagens-flash}}
+      <form method="post" action="/redefinir-senha/{{id}}/{{token}}" class="formulario-resetar-senha">
+        <label for="novaSenha">Nova Senha:</label>
+        <input type="password" name="novaSenha">
+        <label for="confirmarSenha">Confirmar Senha:</label>
+        <input type="password" name="confirmarSenha">
+        <input type="submit" value="Redefinir Senha">
+      </form>
+    </section>
+  </main>
+  {{>main-footer}}
+</body>

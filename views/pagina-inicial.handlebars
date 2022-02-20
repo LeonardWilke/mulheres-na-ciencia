@@ -1,0 +1,50 @@
+<title>Meninas e Mulheres na Ciência</title>
+<meta name="description"
+  content='Bem vinda ao site do projeto "Meninas e Mulheres na Ciência". Nesse site, você encontrará um repositório com as informações produzidas pelo projeto, como análises, teses catalogadas, entrevistas, entre outros.'>
+<link rel="stylesheet" type="text/css" href="/css/styles-pagina-inicial.css">
+</head>
+
+<body>
+  {{>main-header}}
+  <main>
+    <section class="secao-bem-vinda">
+      {{#if error}}
+      <div class="mensagem mensagem-erro">{{error}}</div>
+      {{/if}}
+      {{>area-restrita/mensagens-flash}}
+      <h2>Bem-vinda ao<br>repositório do Meninas e Mulheres na Ciência!</h2>
+      <p>O Projeto Meninas e Mulheres nas Ciências do Ifpr Curitiba iniciou suas atividades em 2020, com o objetivo de
+        catalogação e análise da presença de meninas em seus cursos de Ensino Médio técnico. Uma das frentes que surgiu,
+        ao longo do ano de 2021 foi a elaboração do site/aplicativo, que divulga as ações de nosso Projeto.</p>
+      <img src="/imagens/pagina-inicial/cientista-01.png">
+    </section>
+    <section class="secao-analises">
+      <h2>Análises</h2>
+      <p>Aqui apresentamos a catalogação e análise de dados da entrada e conclusão dos cursos do Ensino médio técnico,
+        por meninas, no Ifpr Campus Curitiba.</p>
+      <div>
+        <a href="/analises/">Saiba Mais</a>
+        <img src="/imagens/pagina-inicial/ciencia-01.png">
+      </div>
+    </section>
+    <section class="secao-trabalhos-catalogados">
+      <h2>Catalogação de<br>trabalhos acadêmicos</h2>
+      <p>Um dos objetivos do Projeto de pesquisa é o de produzir a catalogação de dissertações e teses com temáticas
+        relacionadas com a nossa pesquisa. Aqui, apresentamos algumas dessas análises!
+      </p>
+      <div>
+        <img src="/imagens/pagina-inicial/livros-01.png">
+        <a href="/catalogacoes/">Saiba<br>Mais</a>
+      </div>
+    </section>
+    <section class="secao-dicas-culturais">
+      <h2>Dicas Culturais</h2>
+      <p>Esse é o espaço para disponibilizar informações sobre Dicas culturais, como filmes, documentários, exposições e
+        demais ações que são muito caras ao Projeto de pesquisa.
+      </p>
+      <a href="/dicas-culturais/">Saiba<br>Mais</a>
+      <img src="/imagens/pagina-inicial/lendo-01.png">
+    </section>
+  </main>
+  {{>main-footer}}
+</body>

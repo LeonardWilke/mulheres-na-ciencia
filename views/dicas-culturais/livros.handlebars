@@ -1,0 +1,67 @@
+<title>Livros Recomendados - Meninas e Mulheres na Ciência</title>
+<meta name="description" content='Aqui você encontra livros com a temática "Meninas e Mulheres na CiênciaR"'>
+<link rel="stylesheet" type="text/css" href="/css/styles-dicas-culturais.css">
+</head>
+
+<body>
+  {{>main-header}}
+  <main>
+    <section>
+      <div class="titulo-com-seta">
+        <a class="botao-voltar-dicas-culturais" href="/dicas-culturais/"><img
+            src="/imagens/dicas-culturais/setaIcone.png"></a>
+        <h2 class="titulo-section">Livros Recomendados</h2>
+      </div>
+      <ul class="lista-recomendacoes">
+        {{#each livros}}
+        <li>
+          {{titulo}}
+
+
+
+        </li>
+        <p>{{sinopse}}</p>
+        <img src="{{caminhoImagem}}">
+
+
+
+        {{else}}
+        <p>Em breve!</p>
+
+        {{/each}}
+      </ul>
+
+      <table class="tabela-pagina">
+        <tr>
+          {{#if botaoPrimeiraPagina}}
+          <td><a href="/dicas-culturais/livros">1</a></td>
+          <td>...</td>
+          {{/if}}
+          {{#if paginaAnterior}}
+          <td><a href="/dicas-culturais/livros?pagina={{paginaAnterior}}">{{paginaAnterior}}</a>
+          </td>
+          {{else}}
+          <td><a href="" onclick="return false" class="link-desabilitado">1</a></td>
+          {{/if}}
+          <td class="pagina-atual">{{paginaAtual}}</td>
+          {{#if proximaPagina}}
+          <td><a href="/dicas-culturais/livros?pagina={{proximaPagina}}">{{proximaPagina}}</a>
+          </td>
+          {{#if botaoUltimaPagina}}
+          <td>...</td>
+          <td><a href="/dicas-culturais/livros?pagina={{ultimaPagina}}">{{ultimaPagina}}</a>
+          </td>
+          {{/if}}
+          {{else}}
+          <td><a href="" onclick="return false" class="link-desabilitado">{{paginaAtual}}</a></td>
+          {{/if}}
+
+
+
+        </tr>
+      </table>
+
+    </section>
+  </main>
+  {{>main-footer}}
+</body>

@@ -1,0 +1,80 @@
+<title>Registrar Análises - Meninas e Mulheres na Ciência</title>
+<meta name="description"
+  content='Área privada reservada para a edição de análises do projeto "Meninas e Mulheres na Ciência"'>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script>
+
+</script>
+</head>
+
+<body onload="selecionarOpcaoPreDefinida({})">
+  {{>area-restrita/header-restrita}}
+  <main>
+    <section>
+      {{>area-restrita/voltar-e-logo caminho="/restrito/gerenciar/analises"}}
+      <div class="texto-Titulo titulo-dados-integrante">
+      </div>
+
+      {{#if objetoAEditar}}
+      <form class="formulario-registro" action="/restrito/update/analise/{{objetoAEditar.id}}" method="post"
+        enctype="multipart/form-data">
+        {{else}}
+        <form class="formulario-registro" action="/restrito/registrar/analise" method="post"
+          enctype="multipart/form-data">
+          {{/if}}
+
+          <span>Título da Análise: </span>
+          <input type="text" name="tituloAnalise" required="required" value="{{objetoAEditar.tituloAnalise}}">
+
+          {{#if objetoAEditar.caminhoImagemCapa}}
+          <span>Imagem de Capa Atual:</span>
+          <img src="{{objetoAEditar.caminhoImagemCapa}}">
+          <input type="text" name="caminhoImagemCapa" style="display: none;"
+            value="{{objetoAEditar.caminhoImagemCapa}}">
+          <span>Imagem nova (se não quiser mudar a imagem não mexa neste campo): </span>
+          <input type="file" name="imagemCapa" accept="image/*">
+
+          {{else}}
+          <span>Imagem de Capa: </span>
+          <input type="file" name="imagemCapa" required="required" accept="image/*">
+          {{/if}}
+
+          <span>Texto: </span>
+          <input name="texto" type="hidden">
+          {{#if objetoAEditar.caminhoTexto}}
+          <div id="texto-quill">{{> (lookup objetoAEditar 'caminhoTexto')}}</div>
+          {{else}}
+          <div id="texto-quill"></div>
+          {{/if}}
+
+
+          <input type="submit" value="Salvar">
+        </form>
+
+
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script>
+    var toolbarOptions = [['bold', 'italic', 'underline'], ['link', 'image'], [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'align': [] }]]
+    var quill = new Quill('#texto-quill', {
+      modules: {
+        toolbar: toolbarOptions
+      },
+      theme: 'snow'
+    })
+
+    var form = document.querySelector('form')
+    form.onsubmit = function () {
+      var texto = document.querySelector('input[name=texto]')
+      texto.value = quill.root.innerHTML
+    }
+
+
+  </script>
+</body>

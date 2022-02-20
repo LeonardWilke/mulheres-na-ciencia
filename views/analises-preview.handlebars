@@ -1,0 +1,29 @@
+<title>Análises - Meninas e Mulheres na Ciência</title>
+<meta name="description" content='Nessa seção do site, você encontra análises sobre a temática do projeto.'>
+<link rel="stylesheet" type="text/css" href="/css/styles-paginas-pesquisas.css">
+<style>
+  header,
+  footer {
+    background-color: #280e40;
+  }
+
+  section {
+    background-color: rgba(193, 159, 255, 64%);
+  }
+</style>
+
+</head>
+
+<body>
+  {{>main-header}}
+  <main>
+    <section>
+      <div class='titulo-pagina'>
+        <h2>{{analise.tituloAnalise}}</h2>
+      </div>
+      {{> (lookup analise 'caminhoTexto')}}
+
+    </section>
+  </main>
+  {{>main-footer}}
+</body>

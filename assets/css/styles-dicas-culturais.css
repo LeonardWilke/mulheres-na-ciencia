@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Bunya Light";
+  src: url(../assets/fonts/bunya-light-webfont.woff);
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/montserrat-regular-webfont.woff);
+}
+
+header {
+  background-color: #3d5a80;
+}
+
+img {
+  max-width: 65vw;
+}
+
+section {
+  color: #000;
+  background-color: #d3f7ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3vh;
+}
+
+section a {
+  text-decoration: underline;
+}
+
+section a, section h3, section p, section li {
+  color: #000;
+  font-family: "Montserrat Regular", Helvetica, sans-serif;
+}
+
+.titulo-section {
+  font-family: "Bunya Light", Arial, sans-serif;
+  min-width: 80vw;
+  padding-top: 1.7vh;
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 0.05em solid #000;
+}
+
+.itens-section {
+  padding-top: 0.7em;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.itens-section *:nth-child(2) {
+  margin-top: 0.2em;
+}
+
+.lista-recomendacoes {
+  margin-left: 11vw;
+  margin-right: 11vw;
+  list-style-type: disc;
+  list-style-position: inside;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.lista-recomendacoes li {
+  list-style-type: disc;
+  margin-top: 2.1vh;
+  word-break: break-all;
+  font-weight: bold;
+}
+
+.lista-recomendacoes li p {
+  text-align: justify;
+  padding-top: 1.4vh;
+  word-break: break-all;
+  
+}
+
+.lista-recomendacoes p {
+  margin-top: 1.5vh;
+}
+
+
+.lista-recomendacoes img {
+  padding-top: 2.5vh;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  word-break: break-all;
+
+}
+
+footer {
+  background-color: #314a6b;
+  color: #FFF;
+}
+
+footer a {
+  color: #FFF;
+}
+
+.titulo-com-seta {
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.titulo-com-seta h2 {
+  flex-basis: 80vw;
+  flex-shrink: 1;
+}
+
+.titulo-com-seta img {
+  height: 1.7em;
+}
+
+.titulo-com-seta a {
+  flex-shrink: 1;
+  margin-left: 1.5vw;
+  align-self: center;
+  justify-self: flex-start;
+}
+
+
+.titulos-lista {
+  position: relative;
+  left: -1vw;
+}
+
+.tabela-pagina {
+  margin-top: 3.5vh
+}
+
+.tabela-pagina td {
+  padding: 1.5vh;
+  border: 0.1vh solid #000;
+  font-size: 1.4rem;
+  font-family: "Montserrat Regular", Helvetica, sans-serif;
+}
+
+.tabela-pagina .pagina-atual {
+  font-weight: bold;
+}
+
+.tabela-pagina a {
+  text-decoration: none
+}
+
+@media screen and (min-width: 700px) {
+  section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .itens-section {
+    margin: 0 3vw;
+  }
+
+  .itens-section img {
+    max-width: 35vw;
+  }
+
+  .lista-recomendacoes {
+    min-width: 80vw;
+  }
+
+  .lista-recomendacoes img {
+    max-height: 50vh;
+  }
+
+  .section-trabalhos {
+    flex-direction: column;
+    flex-wrap: nowrap ;
+    align-items: center;
+  }
+}

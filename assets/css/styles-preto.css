@@ -1,0 +1,37 @@
+    header,
+    footer {
+      color: #000;
+    }
+
+    
+
+    .textos-logo {
+      color: #000;
+    }
+
+    .textos-logo *:nth-child(1) {
+      border-bottom: 0.1vh solid #000;
+    }
+
+    footer a {
+      color: #000;
+    }
+
+    .footer-conteudo {
+      color: #000;
+    }
+
+    .footer-conteudo-lado-esquerdo hr {
+      border-top: 0.05rem solid #000;
+      border-bottom: none;
+    }
+
+    .footer-conteudo-lado-esquerdo ul li a {
+      color: #000;
+    }
+
+    @media screen and (min-width: 700px) {
+      header nav[class="itens-header"] ul li a {
+        color: #000;
+      }
+    }

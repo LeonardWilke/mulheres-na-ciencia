@@ -1,0 +1,477 @@
+
+  header,
+  footer {
+    background-color: #54257d;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  section h2 {
+    font-family: "Bunya Light", Arial, sans-serif;
+    font-size: 2.1rem;
+  }
+
+  section a,
+  section p {
+    font-family: "Montserrat Regular", Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  section a {
+    border: 0.1vh solid #000;
+  }
+
+  .secao-bem-vinda {
+    background-color: #e6cffa;
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    align-items: center;
+  }
+
+  .secao-bem-vinda h2,
+  .secao-trabalhos-catalogados h2 {
+    text-align: center;
+    padding-bottom: 1.4vh;
+    border-bottom: 0.1vh solid #000;
+  }
+
+  .secao-bem-vinda p {
+    padding-top: 2vh;
+    text-align: justify;
+  }
+
+  .secao-bem-vinda img {
+    margin-top: 4vh;
+    max-width: 55vw;
+  }
+
+  .secao-analises {
+    background-color: rgba(250, 224, 109, 64%);
+    padding-top: 2.5vh;
+    padding-bottom: 5vh;
+    align-items: center;
+  }
+
+  .secao-analises h2 {
+    text-align: center;
+    border-bottom: 0.1vh solid #000;
+    margin-bottom: 4vh;
+  }
+
+  .secao-analises p {
+    text-align: justify;
+    margin-bottom: 3vh;
+    max-width: 85vw;
+  }
+
+  .secao-analises div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 0.1vh solid #000;
+    border-right: 0.1vh solid #000;
+    min-width: 85vw;
+  }
+
+  .secao-analises div a {
+    padding: 2vh 6vw;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+  }
+
+  .secao-analises div img {
+    max-width: 55vw;
+  }
+
+  .secao-trabalhos-catalogados {
+    background-color: #c19fff;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+
+  .secao-trabalhos-catalogados h2 {
+    padding-bottom: 1.2vh;
+  }
+
+  .secao-trabalhos-catalogados p {
+    margin-top: 2vh;
+    padding-left: 1vw;
+  }
+
+  .secao-trabalhos-catalogados div {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .secao-trabalhos-catalogados div img {
+    max-width: 40vw;
+  }
+
+  .secao-trabalhos-catalogados div a {
+    text-align: center;
+    padding: 1.5vh 8vw;
+  }
+
+  .secao-dicas-culturais {
+    background-color: rgba(114, 196, 255, 16%);
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    align-items: center;
+  }
+
+  .secao-dicas-culturais h2 {
+    align-self: flex-start;
+    width: fit-content;
+    padding-bottom: 1vh;
+    border-bottom: 0.1vh solid #000;
+  }
+
+  .secao-dicas-culturais p {
+    text-align: justify;
+    margin-top: 1.5vh;
+  }
+
+  .secao-dicas-culturais a {
+    margin-top: 3vh;
+    text-align: center;
+    padding: 1.5vh 11vw;
+  }
+
+  .secao-dicas-culturais img {
+    max-width: 85vw;
+  }
+
+  .secao-sites-e-eventos {
+    padding-top: 4.5vh;
+    padding-bottom: 4vh;
+    background-color: #f8e2b0;
+    align-items: center;
+  }
+
+  .secao-sites-e-eventos h2 {
+    text-align: center;
+    width: fit-content;
+    padding-bottom: 0.7vh;
+    border-bottom: 0.1vh solid #000;
+  }
+
+  .secao-sites-e-eventos p {
+    margin-top: 2.5vh;
+    text-align: justify;
+  }
+
+  .secao-sites-e-eventos a {
+    margin-top: 2.5vh;
+    padding: 1.5vh 12vw;
+  }
+
+  .secao-entrevistas {
+    padding-top: 4vh;
+    padding-bottom: 7vh;
+    background-color: rgba(6, 78, 130, 16%);
+    align-items: center;
+  }
+
+  .secao-entrevistas h2 {
+    align-self: flex-start;
+    width: fit-content;
+    padding-bottom: 1vh;
+    border-bottom: 0.1vh solid #000;
+  }
+
+  .secao-entrevistas img {
+    margin-top: 1.5vh;
+    max-width: 50vw;
+  }
+
+  .secao-entrevistas p {
+    margin-top: 2vh;
+    text-align: justify;
+  }
+
+  .secao-entrevistas a {
+    text-align: center;
+    margin-top: 3vh;
+    padding: 1.5vh 12vw;
+  }
+
+  @media screen and (min-width:800px) {
+    footer {
+      background-color: #54257d;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+
+    section h2 {
+      font-family: "Bunya Light", Arial, sans-serif;
+      font-size: 2.1rem;
+    }
+
+    section a,
+    section p {
+      font-family: "Montserrat Regular", Helvetica, sans-serif;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    section a {
+      border: 0.1vh solid #000;
+    }
+
+    .secao-bem-vinda {
+      background-color: #e6cffa;
+      display: flex;
+      flex-direction: row;
+      padding-top: 4vh;
+      padding-bottom: 5vh;
+      align-items: right;
+      text-align: center;
+    }
+
+    .secao-bem-vinda h2 {
+      text-align: center
+    }
+
+    .secao-trabalhos-catalogados h2 {
+      text-align: left;
+      padding-bottom: 0vh;
+      border-bottom: 0.1vh solid #000;
+    }
+
+    .secao-bem-vinda p {
+      padding-top: 2vh;
+      text-align: right;
+    }
+
+    .secao-bem-vinda img {
+      margin-top: 4vh;
+      max-width: 30vw;
+
+    }
+
+    .secao-analises {
+      background-color: rgba(250, 224, 109, 64%);
+      padding-top: 2.5vh;
+      padding-bottom: 5vh;
+      align-items: center;
+    }
+
+    .secao-analises h2 {
+      text-align: center;
+      border-bottom: 0.1vh solid #000;
+      margin-bottom: 4vh;
+    }
+
+    .secao-analises p {
+      text-align: justify;
+      margin-bottom: 3vh;
+      max-width: 85vw;
+    }
+
+    .secao-analises div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-left: 0.1vh solid #000;
+      border-right: 0.1vh solid #000;
+      min-width: 85vw;
+    }
+
+    .secao-analises div a {
+      padding: 2vh 6vw;
+      margin-top: 3vh;
+      margin-bottom: 2vh;
+    }
+
+    .secao-analises div img {
+      max-width: 55vw;
+    }
+
+    .secao-trabalhos-catalogados {
+      background-color: #c19fff;
+      padding-top: 6vh;
+      padding-bottom: 6vh;
+    }
+
+    .secao-trabalhos-catalogados h2 {
+      padding-bottom: 1.2vh;
+    }
+
+    .secao-trabalhos-catalogados p {
+      margin-top: 2vh;
+      padding-left: 1vw;
+    }
+
+    .secao-trabalhos-catalogados div {
+      margin-top: 4vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .secao-trabalhos-catalogados div img {
+      max-width: 40vw;
+    }
+
+    .secao-trabalhos-catalogados div a {
+      text-align: center;
+      padding: 1.5vh 8vw;
+    }
+
+    .secao-dicas-culturais {
+      background-color: rgba(114, 196, 255, 16%);
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      align-items: center;
+    }
+
+    .secao-dicas-culturais h2 {
+      align-self: flex-start;
+      width: fit-content;
+      padding-bottom: 1vh;
+      border-bottom: 0.1vh solid #000;
+    }
+
+    .secao-dicas-culturais p {
+      text-align: justify;
+      margin-top: 1.5vh;
+    }
+
+    .secao-dicas-culturais a {
+      margin-top: 3vh;
+      text-align: center;
+      padding: 1.5vh 11vw;
+    }
+
+    .secao-dicas-culturais img {
+      max-width: 85vw;
+    }
+
+    .secao-sites-e-eventos {
+      padding-top: 4.5vh;
+      padding-bottom: 4vh;
+      background-color: #f8e2b0;
+      align-items: center;
+    }
+
+    .secao-sites-e-eventos h2 {
+      text-align: center;
+      width: fit-content;
+      padding-bottom: 0.7vh;
+      border-bottom: 0.1vh solid #000;
+    }
+
+    .secao-sites-e-eventos p {
+      margin-top: 2.5vh;
+      text-align: justify;
+    }
+
+    .secao-sites-e-eventos a {
+      margin-top: 2.5vh;
+      padding: 1.5vh 12vw;
+    }
+
+    .secao-entrevistas {
+      padding-top: 4vh;
+      padding-bottom: 7vh;
+      background-color: rgba(6, 78, 130, 16%);
+      align-items: center;
+    }
+
+    .secao-entrevistas h2 {
+      align-self: flex-start;
+      width: fit-content;
+      padding-bottom: 1vh;
+      border-bottom: 0.1vh solid #000;
+    }
+
+    .secao-entrevistas img {
+      margin-top: 1.5vh;
+      max-width: 50vw;
+    }
+
+    .secao-entrevistas p {
+      margin-top: 2vh;
+      text-align: justify;
+    }
+
+    .secao-entrevistas a {
+      text-align: center;
+      margin-top: 3vh;
+      padding: 1.5vh 12vw;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .secao-bem-vinda {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .secao-bem-vinda p, .secao-bem-vinda img {
+      max-width: 40vw;
+    }
+
+    .secao-analises {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .secao-analises h2 {
+      min-width: 85vw;
+      border: none;
+    }
+
+    .secao-analises div {
+      min-width: 0;
+      padding: 0 5vw;
+      max-width: 50vw;
+    }
+
+    .secao-analises div img {
+      max-width: 30vw;
+    }
+
+    .secao-analises p {
+      max-width: 40vw;
+      margin-right: 4vw;
+    }
+
+    .secao-trabalhos-catalogados {
+      align-items: center;
+    }
+
+    .secao-trabalhos-catalogados div {
+      border-left: 0.1vh solid #000;
+      border-right: 0.1vh solid #000;
+      margin-top: 6vh;
+      min-width: 60vw;
+    }
+
+    .secao-trabalhos-catalogados div img {
+      max-width: 25vw;
+    }
+
+    .secao-dicas-culturais {
+      padding-bottom: 5vh;
+    }
+
+    .secao-dicas-culturais img {
+      max-width: 70vw;
+    }
+  }

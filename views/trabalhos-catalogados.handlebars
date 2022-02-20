@@ -1,0 +1,82 @@
+<title>Trabalhos acadêmicos catalogados - Meninas e Mulheres na Ciência</title>
+<meta name="description" content='Nessa seção do site, você encontra trabalhos acadêmicos que o projeto catalogou.'>
+<link rel="stylesheet" type="text/css" href="/css/styles-preto.css">
+<link rel="stylesheet" type="text/css" href="/css/styles-paginas-pesquisas.css">
+<link rel="stylesheet" type="text/css" href="/css/styles-dicas-culturais.css">
+
+<style>
+  header,
+  footer {
+    background-color: #ff912c;
+  }
+
+  section {
+    background-color: rgba(190, 227, 253, 67%);
+  }
+</style>
+</head>
+
+<body>
+  {{>main-header preto=true}}
+  <main>
+    <section class="section-trabalhos">
+      <h2 class="titulo-pagina">Trabalhos acadêmicos catalogados</h2>
+      <p>O processo de catalogação e análise de dissertações e teses ocorre desde 2021, a cargo da estudante bolsista
+        Adanlyn. O processo se desenvolve tendo como objeto de pesquisa a BDTD - Biblioteca Digital Brasileira de Teses
+        e Dissertações.
+      </p>
+      <form class="pesquisa" action="#" method="get">
+        <input type="text" name="search">
+        <input type="submit" value="">
+      </form>
+      <ul class="lista-resultados">
+        {{#each trabalhos}}
+
+        <li><a href="{{linkTrabalho}}">
+            <h3>{{tituloTrabalho}}</h3>
+          </a>
+          <strong><em>Data de Publicação: </em></strong> {{formatarData dataPublicacao}}<br>
+          <strong><em>Autoria: </em></strong> {{autor}}<br>
+          <strong><em>Tipo: </em></strong> {{categoriaTrabalho}}<br>
+          <strong><em>Instituição: </em></strong> {{instituicao}}
+        </li>
+        </a>
+
+        {{/each}}
+      </ul>
+
+      <table class="tabela-pagina">
+        <tr>
+          {{#if botaoPrimeiraPagina}}
+          <td><a href="/catalogacoes">1</a></td>
+          <td>...</td>
+          {{/if}}
+          {{#if paginaAnterior}}
+          <td><a href="/catalogacoes?pagina={{paginaAnterior}}">{{paginaAnterior}}</a>
+          </td>
+          {{else}}
+          <td><a href="" onclick="return false" class="link-desabilitado">1</a></td>
+          {{/if}}
+          <td class="pagina-atual">{{paginaAtual}}</td>
+          {{#if proximaPagina}}
+          <td><a href="/catalogacoes?pagina={{proximaPagina}}">{{proximaPagina}}</a>
+          </td>
+          {{#if botaoUltimaPagina}}
+          <td>...</td>
+          <td><a href="/catalogacoes?pagina={{ultimaPagina}}">{{ultimaPagina}}</a>
+          </td>
+          {{/if}}
+          {{else}}
+          <td><a href="" onclick="return false" class="link-desabilitado">{{paginaAtual}}</a></td>
+          {{/if}}
+        </tr>
+      </table>
+
+
+    </section>
+
+
+
+  </main>
+  {{>main-footer-preta}}
+</body>

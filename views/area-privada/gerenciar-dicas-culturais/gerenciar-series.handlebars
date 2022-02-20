@@ -1,0 +1,116 @@
+<title>Gerenciamento de Séries - Meninas e Mulheres na Ciência</title>
+<meta name="description"
+  content='Área privada reservada para o gerenciamento dos séries do projeto "Meninas e Mulheres na Ciência"'>
+</head>
+
+<body>
+  {{>area-restrita/header-restrita}}
+  <main>
+    <section>
+      {{>area-restrita/mensagens-flash }}
+      {{>area-restrita/voltar-e-logo caminho="/restrito/gerenciar/dicas-culturais/"}}
+      <h2 class="texto-Titulo texto-Titulo-2">Séries cadastradas</h2>
+      {{>area-restrita/botao-criar nomeTabela='dicas-culturais/series/'}}
+
+      <div class="registros">
+        {{#each dados}}
+        <table class="tabela-edicao-conteudo">
+          <colgroup>
+            <col span="1" style="width: 25%;">
+            <col span="1" style="width: 75%;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td>Título</td>
+              <td>{{titulo}}</td>
+            </tr>
+            <tr>
+              <td>Direção da Série</td>
+              <td>{{direcaoSerie}}</td>
+            </tr>
+            <tr>
+              <td>Data de Lançamento</td>
+              <td>{{dataLancamento}}</td>
+            </tr>
+            <tr>
+              <td>Quantidade de temporadas</td>
+              <td>{{qtdTemporadas}}</td>
+            </tr>
+            <tr>
+              <td>Sinopse</td>
+              <td>{{sinopse}}</td>
+            </tr>
+            <tr>
+              <td>Imagem</td>
+              <td><img src="{{caminhoImagem}}"></td>
+            </tr>
+
+            <td colspan="2">
+              <div class="botoes-deletar-editar">
+                <a onclick='abrirMenuConfirmacaoExclusao({{idDicaCultural}}, "{{titulo}}")'>
+                  <img src="/imagens/area-restrita/iconeDeletar.png">
+                </a>
+                <a href="/restrito/editar/dicas-culturais/series/{{idDicaCultural}}">
+                  <img src="/imagens/area-restrita/iconeEditar.png">
+                </a>
+              </div>
+            </td>
+          </tbody>
+        </table>
+        {{else}}
+        <table class="tabela-edicao-conteudo">
+          <td>{{mensagemErro}}</td>
+        </table>
+        {{/each}}
+        <div class="overlay-excluir">
+          <img src="/icones/iconeSite.png">
+          <p class="deseja-excluir"></p>
+          <div class="botoes-excluir">
+            <form method="post" action="/restrito/deletar/dicas-culturais/{{nomeTabela}}/">
+              <button type="submit">Sim</button>
+            </form>
+            <button onclick="fecharMenuConfirmacaoExclusao()">Não</button>
+          </div>
+        </div>
+
+        <table class="tabela-edicao-conteudo">
+          <tr>
+            {{#if botaoPrimeiraPagina}}
+            <td><a href="/restrito/gerenciar/dicas-culturais/{{nomeTabela}}">1</a></td>
+            <td>...</td>
+            {{/if}}
+            {{#if paginaAnterior}}
+            <td><a
+                href="/restrito/gerenciar/dicas-culturais/{{nomeTabela}}?pagina={{paginaAnterior}}">{{paginaAnterior}}</a>
+            </td>
+            {{else}}
+            <td><a href="" onclick="return false" class="link-desabilitado">1</a></td>
+            {{/if}}
+            <td class="pagina-atual">{{paginaAtual}}</td>
+            {{#if proximaPagina}}
+            <td><a
+                href="/restrito/gerenciar/dicas-culturais/{{nomeTabela}}?pagina={{proximaPagina}}">{{proximaPagina}}</a>
+            </td>
+            {{#if botaoUltimaPagina}}
+            <td>...</td>
+            <td><a
+                href="/restrito/gerenciar/dicas-culturais/{{nomeTabela}}?pagina={{ultimaPagina}}">{{ultimaPagina}}</a>
+            </td>
+            {{/if}}
+            {{else}}
+            <td><a href="" onclick="return false" class="link-desabilitado">{{paginaAtual}}</a></td>
+            {{/if}}
+
+
+
+          </tr>
+        </table>
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

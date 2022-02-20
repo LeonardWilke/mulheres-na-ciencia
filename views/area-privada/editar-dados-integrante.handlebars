@@ -1,0 +1,59 @@
+<title>Dados Pessoais Integrante - Meninas e Mulheres na Ciência</title>
+<meta name="description"
+  content='Área privada reservada para editar os dados pessoais dos integrantes do projeto "Meninas e Mulheres na Ciência"'>
+
+</head>
+
+<body>
+  {{>area-restrita/header-restrita}}
+  <main>
+    <section>
+      {{>area-restrita/mensagens-flash }}
+      <div class="voltar-e-logo">
+        <a class="botao-voltar" href="/restrito/">
+          <img src="/icones/setaVoltarBranca.png">
+        </a>
+        <img class="logo-site" src="/icones/iconeSite.png">
+      </div>
+      <div class="texto-Titulo titulo-dados-integrante">
+        <h2>Dados Pessoais</h2>
+      </div>
+
+      <form action="/restrito/editar-perfil" method="post">
+
+        <span>Nome (não precisa ser o nome de registro, pode ser o nome social): </span>
+        <input type="text" name="nome" required="required" value="{{usuario.nome}}">
+
+        <span>CPF: </span>
+        <input type="number" name="cpfIntegrante" required="required" value="{{usuario.cpfIntegrante}}" />
+
+        <span>RG: </span>
+        <input type="number" name="rgIntegrante" required="required" value="{{usuario.rgIntegrante}}" />
+
+        <span>Telefone: </span>
+        <input type="text" name="telefone" required="required" value="{{usuario.telefone}}" />
+
+        <span>E-mail: </span>
+        <input type="email" name="email" required="required" value="{{usuario.email}}" />
+
+        <span>Senha atual (deixe este campo vazio se não quiser mudar a senha): </span>
+        <input type="password" name="senhaAtual">
+
+        <span>Nova Senha (deixe este campo vazio se não quiser mudar a senha):</span>
+        <input type="password" name="novaSenha">
+
+        <span>Confirmar Nova Senha (deixe este campo vazio se não quiser mudar a senha):</span>
+        <input type="password" name="confirmarNovaSenha">
+
+        <input type="submit" value="Salvar">
+
+      </form>
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

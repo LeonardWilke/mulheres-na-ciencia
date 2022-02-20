@@ -1,0 +1,94 @@
+<header>
+  <div class="itens-header logo-site">
+    <a class="itens-header" href="/">
+      {{#if preto}}
+      <img class="itens-header imagem-logo" src="/icones/iconSitePreto.png">
+      {{else}}
+      <img class="itens-header imagem-logo" src="/icones/iconeSite.png">
+      {{/if}}
+    </a>
+    <div class="itens-header textos-logo">
+      <h1>Meninas e Mulheres</h1>
+      <h1>na Ciência</h1>
+    </div>
+  </div>
+  <nav class="itens-header">
+    <ul>
+      <li><a href="/">
+          <h2>Home</h2>
+        </a></li>
+      <li><a href="/analises/">
+          <h2>Análises</h2>
+        </a></li>
+      <li><a href="/catalogacoes/">
+          <h2>Catalogação de<br>trabalhos acadêmicos</h2>
+        </a></li>
+      <li><a href="/dicas-culturais/">
+          <h2>Dicas culturais</h2>
+        </a></li>
+    </ul>
+  </nav>
+  <ul class="itens-header botoes-header">
+    <li class="itens-header">
+      {{#if user}}
+      {{#if preto}}
+      <img onclick="redirecionarAreaRestrita()" class="itens-header" src="/icones/iconAdministracaoPreto.png">
+      {{else}}
+      <img onclick="redirecionarAreaRestrita()" class="itens-header" src="/icones/iconAdministracao.png">
+      {{/if}}
+
+      {{else}}
+      {{#if preto}}
+      <img onclick="abrirMenuLogin()" class="itens-header" src="/icones/iconAdministracaoPreto.png">
+      {{else}}
+      <img onclick="abrirMenuLogin()" class="itens-header" src="/icones/iconAdministracao.png">
+      {{/if}}
+
+
+      {{/if}}
+
+    </li>
+    <li class="itens-header">
+      {{#if preto}}
+      <img onclick="abrirMenuSanduiche()" class="itens-header" src="/icones/iconeMenuSanduichePreto.png">
+      {{else}}
+      <img onclick="abrirMenuSanduiche()" class="itens-header" src="/icones/iconeMenuSanduiche.png">
+      {{/if}}
+    </li>
+  </ul>
+</header>
+<div id="menu-sanduiche-overlay" class="menu-overlay">
+  <img class="botao-fechar-menu" onclick="fecharMenuSanduiche()" src="/icones/iconX.png">
+  <img class="logo-site-menu" src="/icones/iconeSite.png">
+  <nav>
+    <ul>
+      <li><a href="/">
+          <h2>Home</h2>
+        </a></li>
+      <li><a href="/analises/">
+          <h2>Análises</h2>
+        </a></li>
+      <li><a href="/catalogacoes/">
+          <h2>Catalogação de<br>trabalhos acadêmicos</h2>
+        </a></li>
+      <li><a href="/dicas-culturais/">
+          <h2>Dicas culturais</h2>
+        </a></li>
+    </ul>
+  </nav>
+</div>
+<div id="menu-login-overlay" class="menu-overlay">
+  <img class="botao-fechar-menu" onclick="fecharMenuLogin()" src="/icones/iconX.png">
+  <img class="logo-site-menu" src="/icones/iconeSite.png">
+  <form action="/login" method="post">
+    <label for="cpfIntegrante">CPF</label>
+    <input type="number" name="cpfIntegrante">
+    <label for="senha">Senha</label>
+    <input type="password" name="senha">
+    <a href="/esqueceu-senha">
+      Esqueceu sua senha?
+    </a>
+    <input type="submit" value="">
+  </form>
+
+</div>
